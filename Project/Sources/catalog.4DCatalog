@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="HDI_4DWP_AI_Vector" uuid="01979CADE2A8788F8E67015034442AA9" collation_locale="en">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="Note" uuid="01979CB0A55C7A9781A18E37654F639C" id="1">
+		<field name="ID" uuid="01979CB0A55D7785AF874D8ED19ACE7C" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="Title" uuid="01979CB0BA8A7CD4B14EB895F3F8A9AB" type="10" limiting_length="255" id="2"/>
+		<field name="Document" uuid="01979CB0ECDF7CE1B18E67B7ADC93464" type="21" blob_switch_size="2147483647" id="3"/>
+		<field name="Vector" uuid="0197A783513C77D7B7656234B2CB311F" type="21" blob_switch_size="2147483647" id="4"/>
+		<primary_key field_name="ID" field_uuid="01979CB0A55D7785AF874D8ED19ACE7C"/>
+		<table_extra input_form="Detail" output_form="List"/>
+	</table>
+	<table name="Prompts" uuid="0197B126EAF773CAAED2E33B7D847D75" id="2">
+		<field name="ID" uuid="0197B126EAF875BA8B59DEC449A4346B" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="Description" uuid="0197B12725D57A6EBD3A5807759F8BE6" type="10" limiting_length="255" id="2"/>
+		<field name="Vector" uuid="0197B1273D1878DDA88CF0D4E87F09A5" type="21" blob_switch_size="2147483647" id="3"/>
+		<primary_key field_name="ID" field_uuid="0197B126EAF875BA8B59DEC449A4346B"/>
+		<table_extra output_form="List" input_form="Detail"/>
+	</table>
+	<index kind="regular" unique_keys="true" uuid="01979CB0A55E72419F81CEF04C8B7A23" type="7">
+		<field_ref uuid="01979CB0A55D7785AF874D8ED19ACE7C" name="ID">
+			<table_ref uuid="01979CB0A55C7A9781A18E37654F639C" name="Note"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="0197B126EAF879539C6EB184400028E9" type="7">
+		<field_ref uuid="0197B126EAF875BA8B59DEC449A4346B" name="ID">
+			<table_ref uuid="0197B126EAF773CAAED2E33B7D847D75" name="Prompts"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="0197B127AA1676EDAA2956DAC775BA70" type="3">
+		<field_ref uuid="0197B1273D1878DDA88CF0D4E87F09A5" name="Vector">
+			<table_ref uuid="0197B126EAF773CAAED2E33B7D847D75" name="Prompts"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="0197B127BA5F7A93A446484F2E8A7924" type="3">
+		<field_ref uuid="0197A783513C77D7B7656234B2CB311F" name="Vector">
+			<table_ref uuid="01979CB0A55C7A9781A18E37654F639C" name="Note"/>
+		</field_ref>
+	</index>
+	<base_extra>
+		<journal_file journal_file_enabled="true"/>
+	</base_extra>
+</base>
