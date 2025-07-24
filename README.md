@@ -4,6 +4,8 @@ Make a semantic search with 4D Write Pro documents and 4D AIKit component (4D 20
 
 Find more information on the [blog post](https://blog.4d.com/).
 
+[![Youtube link](https://img.youtube.com/vi/_RBNDd9rpzs/0.jpg)](https://youtu.be/_RBNDd9rpzs)
+
 ## Installing and Using a 4D Project
 
 ### Pre-requisites
