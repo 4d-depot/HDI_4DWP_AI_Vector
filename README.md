@@ -2,7 +2,9 @@
 
 Make a semantic search with [4D Write Pro](https://us.4d.com/4D-write-pro) documents and [4D AIKit](https://developer.4d.com/docs/aikit/overview) component (4D 20 R10)
 
-Find more information on the [blog post](https://blog.4d.com/).
+Find more information on the [blog post](https://blog.4d.com/ai-brings-magical-search-to-4d-write-pro-documents/).
+
+### Live action
 
 [![Youtube link](https://img.youtube.com/vi/_RBNDd9rpzs/0.jpg)](https://youtu.be/_RBNDd9rpzs)
 
